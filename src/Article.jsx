@@ -7,7 +7,7 @@ const Article = (props) => {
         <div>
             <h2>{props.title}です</h2>
             <p>公開設定：<input type='checkbox' checked={props.isPublished} id="chekc" onClick={() => togglePublish(!isPublished)} /></p>
-            <LikeButton count={props.count} />
+            <LikeButton />
         </div>
     )
 };
