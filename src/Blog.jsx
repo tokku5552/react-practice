@@ -1,50 +1,32 @@
 import React from 'react';
 import Article from './Article';
 
-class Blog extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isPublished: false,
-            count: 0
-        }
-    }
+const Blog = () => {
+    // componentDidMount() {
+    //     document.getElementById('counter').addEventListener('click', this.countUp)
+    // }
 
-    componentDidMount() {
-        document.getElementById('counter').addEventListener('click', this.countUp)
-    }
+    // componentDidUpdate() {
+    //     if (this.state.count >= 10) {
+    //         this.setState({ count: 0 })
+    //     }
+    // }
 
-    componentDidUpdate() {
-        if (this.state.count >= 10) {
-            this.setState({ count: 0 })
-        }
-    }
+    // countUp = () => {
+    //     this.setState({
+    //         count: this.state.count + 1
+    //     })
+    // };
 
-    toggledPublish = () => {
-        this.setState({
-            isPublished: !this.state.isPublished
-        })
-    };
+    return (
+        <>
+            <Article
+                title={'Reactの使い方'}
+            />
+        </>
 
-    countUp = () => {
-        this.setState({
-            count: this.state.count + 1
-        })
-    };
+    )
 
-    render() {
-        return (
-            <>
-                <Article
-                    title={'Reactの使い方'}
-                    isPublished={this.state.isPublished}
-                    toggle={() => this.toggledPublish()}
-                    count={this.state.count}
-                />
-            </>
-
-        )
-    }
 }
 
 export default Blog
